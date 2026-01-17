@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot n8n - Sessão Ativa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-wrapper">
+    <div class="chat-container" id="chat-container">
+      <header class="header">
+        <div class="status-group">
+          <div class="status-indicator" id="status-indicator"></div>
+          <div class="brand">
+            <div class="title">Assistente n8n</div>
+            <div class="sub fade-text" id="status-text">Conectando...</div>
+          </div>
+        </div>
+        
+        <button id="restart-session" class="btn restart-btn" title="Iniciar nova sessão">
+          🔁 Iniciar Nova Sessão...
+        </button>
+      </header>
+
+      <main class="messages" id="messages" aria-live="polite"></main>
+
+      <footer class="composer">
+        <form id="chat-form">
+          <input type="text" id="user-input" class="input" placeholder="Pergunte Algo..." required />
+          <button type="submit" id="send-btn" class="btn">Enviar</button>
+        </form>
+      </footer>
+
+      <div class="footer-note">
+        ID da Sessão: <span id="session-id">Carregando...</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
